@@ -138,6 +138,7 @@ async def advantage_spoll_choker(bot, query):
             k = await query.message.edit('This Movie Not Found In DataBase')
             await asyncio.sleep(10)
             await k.delete()
+            await message.delete()
 
 
 @Client.on_callback_query()
@@ -773,6 +774,7 @@ async def advantage_spell_chok(msg):
         k = await msg.reply("I couldn't find anything related to that. Check your spelling")
         await asyncio.sleep(8)
         await k.delete()
+        await message.delete()
         return
     SPELL_CHECK[msg.id] = movielist
     btn = [[
