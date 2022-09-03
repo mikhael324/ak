@@ -135,7 +135,7 @@ async def advantage_spoll_choker(bot, query):
             k = (movie, files, offset, total_results)
             await auto_filter(bot, query, k)
         else:
-            k = await query.message.edit('This Movie Not Found In DataBase')
+            k = await query.message.edit('⚠️Wait For OTT Release.')
             await asyncio.sleep(10)
             await k.delete()
            
@@ -642,10 +642,10 @@ async def auto_filter(client, msg, spoll=False):
         btn = [
             [
                 InlineKeyboardButton(
-                    text=f"[{get_size(file.file_size)}] {file.file_name}", callback_data=f'{pre}#{file.file_id}'
+                    text=f"📂[{get_size(file.file_size)}]𓃵{file.file_name}", callback_data=f'{pre}#{file.file_id}'
                 ),
             ]
-            for file in files
+            for file in files 
         ]
     else:
         btn = [
@@ -723,9 +723,9 @@ async def auto_filter(client, msg, spoll=False):
             await message.reply_text(cap, reply_markup=InlineKeyboardMarkup(btn))
     else:
         dll=await message.reply_text(cap, reply_markup=InlineKeyboardMarkup(btn))
-        await asyncio.sleep(5)
+        await asyncio.sleep(60)
         fll=await dll.edit_text(f"<b>🗑️ Filter Deleted After 2 Mins ‼️ \n 🔍Search Again !!</b>")
-        await asyncio.sleep(10)
+        await asyncio.sleep(60)
         await fll.delete()
         await message.delete()
     if spoll:
@@ -772,7 +772,7 @@ async def advantage_spell_chok(msg):
     movielist = list(dict.fromkeys(movielist))  # removing duplicates
     if not movielist:
         k = await msg.reply("I couldn't find anything related to that. Check your spelling")
-        await asyncio.sleep(8)
+        await asyncio.sleep(10)
         await k.delete()
         await msg.delete()
         return
