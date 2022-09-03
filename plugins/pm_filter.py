@@ -642,7 +642,7 @@ async def auto_filter(client, msg, spoll=False):
         btn = [
             [
                 InlineKeyboardButton(
-                    text=f"📂[{get_size(file.file_size)}]𓃵{file.file_name}", callback_data=f'{pre}#{file.file_id}'
+                    text=f"📂[{get_size(file.file_size)}]👉{file.file_name}", callback_data=f'{pre}#{file.file_id}'
                 ),
             ]
             for file in files 
@@ -724,7 +724,7 @@ async def auto_filter(client, msg, spoll=False):
     else:
         dll=await message.reply_text(cap, reply_markup=InlineKeyboardMarkup(btn))
         await asyncio.sleep(60)
-        fll=await dll.edit_text(f"<b>🗑️ Filter Deleted After 2 Mins ‼️ \n 🔍Search Again !!</b>")
+        fll=await dll.edit_text(f"<b>🗑️ Filter Deleted After 1 Min ‼️ \n 🔍Search Again !!</b>")
         await asyncio.sleep(60)
         await fll.delete()
         await message.delete()
