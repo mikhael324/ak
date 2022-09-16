@@ -819,7 +819,7 @@ async def manual_filters(client, message, text=False):
 
                             await dm.delete()
 
-                            await msg.delete()
+                            await message.delete()
                         else:
                             button = eval(btn)
                             await client.send_message(
@@ -829,6 +829,7 @@ async def manual_filters(client, message, text=False):
                                 reply_markup=InlineKeyboardMarkup(button),
                                 reply_to_message_id=reply_id
                             )
+                            await asyncio.sleep(10)
                             
                     elif btn == "[]":
                         await client.send_cached_media(
