@@ -810,7 +810,7 @@ async def manual_filters(client, message, text=False):
                 try:
                     if fileid == "None":
                         if btn == "[]":
-                        dm= await client.send_message(
+                            dm =await client.send_message(
                                 group_id, 
                                 reply_text, 
                                 disable_web_page_preview=True,
