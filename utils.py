@@ -40,6 +40,9 @@ class temp(object):
     U_NAME = None
     B_NAME = None
     SETTINGS = {}
+    FILES = {}
+    USERS_CANCEL = False
+    GROUPS_CANCEL = False
 
 async def is_subscribed(bot, query):
     if not (AUTH_CHANNEL or REQ_CHANNEL):
