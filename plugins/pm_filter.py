@@ -410,8 +410,10 @@ async def cb_handler(client: Client, query: CallbackQuery):
         buttons = [[
             InlineKeyboardButton('➕ Add Me To Your Groups ➕', url=f'http://t.me/{temp.U_NAME}?startgroup=true')
         ], [
-            InlineKeyboardButton('Movie Search Group', url= 'https://t.me/+40mgi-EjhQdmNTk1'),
-            InlineKeyboardButton('Movie Updates', url='https://t.me/+zW-bcv3QtgZjZTE9')
+            
+            InlineKeyboardButton('Movie Search Group', url= 'https://t.me/+8WaBwiD0uFFhNDQ1')],
+        [       
+            InlineKeyboardButton('Movie Updates', url='https://t.me/+EknURDzxDV0xNGM1')
         ], 
         ]
             
@@ -728,8 +730,8 @@ async def auto_filter(client, msg, spoll=False):
             await message.reply_text(cap, reply_markup=InlineKeyboardMarkup(btn))
     else:
         dll=await message.reply_text(cap, reply_markup=InlineKeyboardMarkup(btn))
-        await asyncio.sleep(60)
-        fll=await dll.edit_text(f"<b>🗑️ Filter Deleted After 1 Min ‼️ \n 🔍Search Again !!</b>")
+        await asyncio.sleep(3600)
+        fll=await dll.edit_text(f"<b>🗑️ Filter Deleted After 1 Hour ‼️ \n 🔍Search Again !!</b>")
         await asyncio.sleep(60)
         await fll.delete()
         await message.delete()
