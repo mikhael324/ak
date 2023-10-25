@@ -25,7 +25,8 @@ async def start(client, message):
         buttons = [[
             InlineKeyboardButton('➕ Add Me As Admin 👉 Groups ➕', url=f'http://t.me/{temp.U_NAME}?startgroup=true')
         ], [
-            InlineKeyboardButton('Movie Search Group', url= 'https://t.me/+8WaBwiD0uFFhNDQ1'),
+            InlineKeyboardButton('Movie Search Group', url= 'https://t.me/+8WaBwiD0uFFhNDQ1')],
+        [
             InlineKeyboardButton('Movie Updates', url='https://t.me/+EknURDzxDV0xNGM1')
         ], 
         ]
@@ -56,7 +57,8 @@ async def start(client, message):
 
         ], [
 
-            InlineKeyboardButton('Movie Search Group', url= 'https://t.me/+8WaBwiD0uFFhNDQ1'),
+            InlineKeyboardButton('Movie Search Group', url= 'https://t.me/+8WaBwiD0uFFhNDQ1')],
+        [
 
             InlineKeyboardButton('Movie Updates', url='https://t.me/+EknURDzxDV0xNGM1')
 
@@ -76,7 +78,8 @@ async def start(client, message):
         buttons = [[
             InlineKeyboardButton('➕ Add Me As Admin 👉 Groups ➕', url=f'http://t.me/{temp.U_NAME}?startgroup=true')
         ], [
-            InlineKeyboardButton('Movie Search Group', url= 'https://t.me/+8WaBwiD0uFFhNDQ1'),
+            InlineKeyboardButton('Movie Search Group', url= 'https://t.me/+8WaBwiD0uFFhNDQ1')],
+        [
             InlineKeyboardButton('Movie Updates', url='https://t.me/+EknURDzxDV0xNGM1')
         ], 
         ]
