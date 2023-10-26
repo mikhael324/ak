@@ -408,12 +408,11 @@ async def cb_handler(client: Client, query: CallbackQuery):
         await query.answer()
     elif query.data == "start":
         buttons = [[
-            InlineKeyboardButton('➕ Add Me To Your Groups ➕', url=f'http://t.me/{temp.U_NAME}?startgroup=true')
+            InlineKeyboardButton('⚡️Aᴅᴅ Mᴇ Tᴏ Yᴏᴜʀ Gʀᴏᴜᴘ⚡️', url=f'http://t.me/{temp.U_NAME}?startgroup=true')
         ], [
-            
-            InlineKeyboardButton('Movie Search Group', url= 'https://t.me/+8WaBwiD0uFFhNDQ1')],
-        [       
-            InlineKeyboardButton('Movie Updates', url='https://t.me/+EknURDzxDV0xNGM1')
+            InlineKeyboardButton('⚜️ Join Movie Request Group ⚜️', url= 'https://t.me/+8WaBwiD0uFFhNDQ1')],
+        [
+            InlineKeyboardButton('🎬 Join Movie Updates Channel 🎬', url='https://t.me/+EknURDzxDV0xNGM1')
         ], 
         ]
             
