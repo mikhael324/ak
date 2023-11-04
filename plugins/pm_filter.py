@@ -412,7 +412,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
         ], [
             InlineKeyboardButton('⚜️ Join Movie Request Group ⚜️', url= 'https://t.me/+8WaBwiD0uFFhNDQ1')],
         [
-            InlineKeyboardButton('🎬 Join Movie Updates Channel 🎬', url='https://t.me/+EknURDzxDV0xNGM1')
+            InlineKeyboardButton('🎬 Join Movie Updates Channel 🎬', url='https://t.me/+ar9qLIXS0Q8wNjg1')
         ], 
         ]
             
