@@ -12,9 +12,9 @@ def is_enabled(value, default):
 
 # Bot information
 SESSION = environ.get('SESSION', 'Media_search')
-API_ID = int(environ('API_ID', '23789353'))
-API_HASH = environ('API_HASH', 'fcc7f1c8b86d3e2062218a24b617e23d')
-BOT_TOKEN = environ('BOT_TOKEN', '6720932085:AAHmUbYbV3EsqwPguF07LwV_QEysQGlG8Cg')
+API_ID = int(environ.get('API_ID', '23789353'))
+API_HASH = environ.get('API_HASH', 'fcc7f1c8b86d3e2062218a24b617e23d')
+BOT_TOKEN = environ.get('BOT_TOKEN', '6720932085:AAHmUbYbV3EsqwPguF07LwV_QEysQGlG8Cg')
 # Bot settings
 CACHE_TIME = int(environ.get('CACHE_TIME', 300))
 USE_CAPTION_FILTER = bool(environ.get('USE_CAPTION_FILTER', False))
