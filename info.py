@@ -34,8 +34,8 @@ REQ_CHANNEL = int(REQ_CHANNEL) if REQ_CHANNEL and id_pattern.search(REQ_CHANNEL)
 
 # MongoDB information
 DATABASE_URI = environ.get('DATABASE_URI', "mongodb+srv://jta:ma@cluster0.r3ojdcx.mongodb.net/?retryWrites=true&w=majority")
-DATABASE_NAME = environ.get('DATABASE_NAME', "Cluster0")
-COLLECTION_NAME = environ.get('COLLECTION_NAME', 'Telegram_Files')
+DATABASE_NAME = environ.get('DATABASE_NAME', "Kurup")
+COLLECTION_NAME = environ.get('COLLECTION_NAME', 'Telegram_Filess')
 JOIN_REQS_DB = environ.get("JOIN_REQS_DB", DATABASE_URI)
 
 # Others
