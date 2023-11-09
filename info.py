@@ -12,20 +12,20 @@ def is_enabled(value, default):
 
 # Bot information
 SESSION = environ.get('SESSION', 'Media_search')
-API_ID = int(environ.get('API_ID', '22085172'))
-API_HASH = environ.get('API_HASH', '9b8613cc83ab0c66d12385664f09c6de')
-BOT_TOKEN = environ.get('BOT_TOKEN', '6847306010:AAG6LUBCsSDJAjtQZG4PWOOwN2u8f0XJroI')
+API_ID = int(environ.get('API_ID', '4052973'))
+API_HASH = environ.get('API_HASH', '3238bd8ae26df065d11c4054fe8a231c')
+BOT_TOKEN = environ.get('BOT_TOKEN', '5461956904:AAF71kyppfVyARUvexVRnP4pA72glVq_oII')
 # Bot settings
 CACHE_TIME = int(environ.get('CACHE_TIME', 300))
 USE_CAPTION_FILTER = bool(environ.get('USE_CAPTION_FILTER', False))
-PICS = (environ.get('PICS', 'https://graph.org/file/4a929a92fbe9bb2314299.jpg')).split()
+PICS = (environ.get('PICS', 'https://te.legra.ph/file/aa5e35b86c0018c346ca6.jpg')).split()
 
 # Admins, Channels & Users
-ADMINS = [int(admin) if id_pattern.search(admin) else admin for admin in environ.get('ADMINS', '823191583 1746132193').split()]
-CHANNELS = [int(ch) if id_pattern.search(ch) else ch for ch in environ.get('CHANNELS', '-1001761183308 -1001702551529 -1001227981388 -1001738644907 -1001794047221').split()]
+ADMINS = [int(admin) if id_pattern.search(admin) else admin for admin in environ.get('ADMINS', '707282066 1746132193').split()]
+CHANNELS = [int(ch) if id_pattern.search(ch) else ch for ch in environ.get('CHANNELS', '-1001591302937 -1001699721730 -1001663686263').split()]
 auth_users = [int(user) if id_pattern.search(user) else user for user in environ.get('AUTH_USERS', '').split()]
 AUTH_USERS = (auth_users + ADMINS) if auth_users else []
-auth_channel = environ.get('AUTH_CHANNEL', '-1001807148288')
+auth_channel = environ.get('AUTH_CHANNEL', '-1001840344928')
 auth_grp = environ.get('AUTH_GROUP')
 AUTH_CHANNEL = int(auth_channel) if auth_channel and id_pattern.search(auth_channel) else None
 AUTH_GROUPS = [int(ch) for ch in auth_grp.split()] if auth_grp else None
