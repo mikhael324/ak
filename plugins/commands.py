@@ -54,7 +54,7 @@ async def start(client, message):
         ], [
             InlineKeyboardButton('⚜️ Join Movie Request Group ⚜️', url= 'https://t.me/+AngJ8lGmH4wwNWY1')],
         [
-            InlineKeyboardButton('🎬 Join Movie Updates Channel 🎬', url='https://t.me/+jG9GemdISt9jOGM1 ')
+            InlineKeyboardButton('🎬 Join Movie Updates Channel 🎬', url='https://t.me/+jG9GemdISt9jOGM1')
         ], 
         ]
         reply_markup = InlineKeyboardMarkup(buttons)
@@ -72,7 +72,7 @@ async def start(client, message):
         ], [
             InlineKeyboardButton('⚜️ Join Movie Request Group ⚜️', url= 'https://t.me/+AngJ8lGmH4wwNWY1')],
         [
-            InlineKeyboardButton('🎬 Join Movie Updates Channel 🎬', url='https://t.me/+jG9GemdISt9jOGM1 ')
+            InlineKeyboardButton('🎬 Join Movie Updates Channel 🎬', url='https://t.me/+jG9GemdISt9jOGM1')
         ], 
         ]
         reply_markup = InlineKeyboardMarkup(buttons)
