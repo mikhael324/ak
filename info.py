@@ -33,7 +33,7 @@ REQ_CHANNEL = environ.get("REQ_CHANNEL", '-1001840344928')
 REQ_CHANNEL = int(REQ_CHANNEL) if REQ_CHANNEL and id_pattern.search(REQ_CHANNEL) else False
 
 # MongoDB information
-DATABASE_URI = environ.get('DATABASE_URI', "mongodb+srv://Akash:Akash@cluster0.5vpsiiy.mongodb.net/?retryWrites=true&w=majority")
+DATABASE_URI = environ.get('DATABASE_URI', "mongodb+srv://akash:%3Cpassword%3E@cluster0.xpetgbw.mongodb.net/?retryWrites=true&w=majority")
 DATABASE_NAME = environ.get('DATABASE_NAME', "Cluster0")
 COLLECTION_NAME = environ.get('COLLECTION_NAME', 'Telegram_Files')
 JOIN_REQS_DB = environ.get("JOIN_REQS_DB", DATABASE_URI)
