@@ -25,11 +25,11 @@ ADMINS = [int(admin) if id_pattern.search(admin) else admin for admin in environ
 CHANNELS = [int(ch) if id_pattern.search(ch) else ch for ch in environ.get('CHANNELS', '-1001642260702 -1001591302937 -1001699721730 -1001663686263').split()]
 auth_users = [int(user) if id_pattern.search(user) else user for user in environ.get('AUTH_USERS', '').split()]
 AUTH_USERS = (auth_users + ADMINS) if auth_users else []
-auth_channel = environ.get('AUTH_CHANNEL', '-1002059503298')
+auth_channel = environ.get('AUTH_CHANNEL', '-1001626802702')
 auth_grp = environ.get('AUTH_GROUP')
 AUTH_CHANNEL = int(auth_channel) if auth_channel and id_pattern.search(auth_channel) else None
 AUTH_GROUPS = [int(ch) for ch in auth_grp.split()] if auth_grp else None
-REQ_CHANNEL = environ.get("REQ_CHANNEL", '-1002059503298')
+REQ_CHANNEL = environ.get("REQ_CHANNEL", '-1001626802702')
 REQ_CHANNEL = int(REQ_CHANNEL) if REQ_CHANNEL and id_pattern.search(REQ_CHANNEL) else False
 
 # MongoDB information
@@ -43,7 +43,7 @@ LOG_CHANNEL = int(environ.get('LOG_CHANNEL', '-1001716429576'))
 SUPPORT_CHAT = environ.get('SUPPORT_CHAT', 'TeamEvamaria')
 P_TTI_SHOW_OFF = is_enabled((environ.get('P_TTI_SHOW_OFF', "False")), False)
 IMDB = is_enabled((environ.get('IMDB', "False")), False)
-SINGLE_BUTTON = is_enabled((environ.get('SINGLE_BUTTON', "True")), True)
+SINGLE_BUTTON = is_enabled((environ.get('SINGLE_BUTTON', "False")), False)
 CUSTOM_FILE_CAPTION = environ.get("CUSTOM_FILE_CAPTION", "FILE : <code>{file_name}</code> \n \n \n 🔰👉 Subscribe our Youtube Channel to win free Iphone Giveaway🥺👇 ❤️ \n \n https://youtube.com/@ThePlotlinee \n https://youtube.com/@ThePlotlinee \n https://youtube.com/@ThePlotlinee \n \n ------------------------- \n ➧@Cinemaclub_3 \n ➧@Cinemaclub_4 \n ➧@ccl_links</b>")
 BATCH_FILE_CAPTION = environ.get("BATCH_FILE_CAPTION", "")
 IMDB_TEMPLATE = environ.get("IMDB_TEMPLATE", "<b>Query: {query}</b> \n‌‌‌‌IMDb Data:\n\n🏷 Title: <a href={url}>{title}</a>\n🎭 Genres: {genres}\n📆 Year: <a href={url}/releaseinfo>{year}</a>\n🌟 Rating: <a href={url}/ratings>{rating}</a> / 10")
