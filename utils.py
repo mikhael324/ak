@@ -5,6 +5,7 @@ from imdb import Cinemagoer
 import asyncio
 from pyrogram.types import Message, InlineKeyboardButton
 from pyrogram import enums
+from pyrogram import Client
 from typing import Union
 import re
 import os
