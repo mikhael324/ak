@@ -45,8 +45,7 @@ class temp(object):
     USERS_CANCEL = False
     GROUPS_CANCEL = False
 
-async def is_subscribed(bot, query):
-    iasync def is_subscribed(bot: Client, query):
+async def is_subscribed(bot: Client, query):
     if not (AUTH_CHANNEL or REQ_CHANNEL_1 or REQ_CHANNEL_2):
         return True
     elif query.from_user.id in ADMINS:
