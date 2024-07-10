@@ -43,7 +43,7 @@ async def ForceSub(bot: Client, event: Message, file_id: str = False, mode="chec
     except Exception as err:
         print(f"Unable to do Force Subscribe to {REQ_CHANNEL_1} and {REQ_CHANNEL_2}\n\nError: {err}\n\n")
         await event.reply(
-            text="Failed To Create Invite Link 🙆 Report 👉 @Maeve_324",
+            text="Failed To Create Invite Link 🙆 Report 👉 @Madshifter",
             parse_mode=enums.ParseMode.MARKDOWN,
             disable_web_page_preview=True
         )
