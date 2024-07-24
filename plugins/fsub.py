@@ -64,7 +64,7 @@ async def ForceSub(bot: Client, event: Message, file_id: str = False, mode="chec
             )
         
         # Check if User is already a member of Channel 1
-            member_channel_1 = await bot.get_chat_member(
+           member_channel_1 = await bot.get_chat_member(
                 chat_id=REQ_CHANNEL_1, 
                 user_id=event.from_user.id
             )
