@@ -50,8 +50,8 @@ async def ForceSub(bot: Client, event: Message, file_id: str = False, mode="chec
         return False
 
 
- if REQ_CHANNEL_1 and REQ_CHANNEL_2 and JOIN_REQS_DB and db().isActive():
-    try:
+    if REQ_CHANNEL_1 and REQ_CHANNEL_2 and JOIN_REQS_DB and db().isActive():
+       try:
         # Check if User is Requested to Join Channel 1
         user_channel_1 = await db().get_user(event.from_user.id, channel=1)
         # Check if User is Requested to Join Channel 2
