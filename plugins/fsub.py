@@ -51,14 +51,35 @@ async def ForceSub(bot: Client, event: Message, file_id: str = False, mode="chec
 
 
     if REQ_CHANNEL_1 and REQ_CHANNEL_2 and JOIN_REQS_DB and db().isActive():
-        try:
+    try:
         # Check if User is Requested to Join Channel 1
-           user_channel_1 = await db().get_user(event.from_user.id, channel=1)
+        user_channel_1 = await db().get_user(event.from_user.id, channel=1)
         # Check if User is Requested to Join Channel 2
-           user_channel_2 = await db().get_user(event.from_user.id, channel=2)
-        # If user is requested to join both channels, return True
-           if user_channel_1 and user_channel_2 and user_channel_1["user_id"] == event.from_user.id and user_channel_2["user_id"] == event.from_user.id:
-               return True
+        user_channel_2 = await db().get_user(event.from_user.id, channel=2)
+        
+        # Check if User is already a member of Channel 2
+        member_channel_2 = await bot.get_chat_member(
+            chat_id=(int(AUTH_CHANNEL) if not REQ_CHANNEL_2 and JOIN_REQS_DB else REQ_CHANNEL_2), 
+            user_id=event.from_user.id
+        )
+        
+        # Check if User is already a member of Channel 1
+        member_channel_1 = await bot.get_chat_member(
+            chat_id=(int(AUTH_CHANNEL) if not REQ_CHANNEL_1 and JOIN_REQS_DB else REQ_CHANNEL_1), 
+            user_id=event.from_user.id
+        )
+        
+        # If user is requested to join both channels
+        if user_channel_1 and user_channel_2 and user_channel_1["user_id"] == event.from_user.id and user_channel_2["user_id"] == event.from_user.id:
+            return True
+        
+        # If user is requested to join first channel and is already a member of second channel
+        if user_channel_1 and member_channel_2.status == "member":
+            return True
+        
+        # If user is already a member of first channel and has requested to join second channel
+        if member_channel_1.status == "member" and user_channel_2:
+            return True
         except Exception as e:
            logger.exception(e, exc_info=True)
            await event.reply(
