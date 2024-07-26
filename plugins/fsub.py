@@ -70,11 +70,11 @@ async def ForceSub(bot: Client, event: Message, file_id: str = False, mode="chec
             )
         
         # If user is requested to join both channels
-            if user_channel_1 and user_channel_2 and user_channel_1["user_id"] == event.from_user.id and user_channel_2["user_id"] == event.from_user.id:
+           if user_channel_1 and user_channel_2 and user_channel_1["user_id"] == event.from_user.id and user_channel_2["user_id"] == event.from_user.id:
                 return True
         
         # If user is requested to join first channel and is already a member of second channel
-            if user_channel_1 and member_channel_2.status == "member":
+           if user_channel_1 and member_channel_2.status == "member":
                 return True
         
         # If user is already a member of first channel and has requested to join second channel
